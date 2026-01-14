@@ -1,0 +1,41 @@
+# ==============================
+# Student Marks Processing System
+# ==============================
+
+# Step 1: Input data (academic-style)
+students = [
+    {"name": "Amit", "math": 85, "science": 78, "english": 92},
+    {"name": "Neha", "math": 65, "science": 70, "english": 60},
+    {"name": "Ravi", "math": 45, "science": 50, "english": 48},
+    {"name": "Sara", "math": 90, "science": 88, "english": 95}
+]
+
+# Step 2: Function to calculate total and average
+def calculate_result(student):
+    total = student["math"] + student["science"] + student["english"]
+    average = total / 3
+    return total, average
+
+# Step 3: Function to assign grade
+def assign_grade(average):
+    if average >= 85:
+        return "A"
+    elif average >= 70:
+        return "B"
+    elif average >= 50:
+        return "C"
+    else:
+        return "F"
+
+# Step 4: Process and display results
+print("===== STUDENT RESULT SHEET =====")
+
+for student in students:
+    total, average = calculate_result(student)
+    grade = assign_grade(average)
+
+    print("Name    :", student["name"])
+    print("Total   :", total)
+    print("Average :", round(average, 2))
+    print("Grade   :", grade)
+    print("-------------------------------")
