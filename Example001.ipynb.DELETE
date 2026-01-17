@@ -34,7 +34,7 @@
     }
    ],
    "source": [
-    "name = \"Kenny\"\n",
+    "name = \"Karen\"\n",
     "age = 30\n",
     "\n",
     "print(name)\n",
